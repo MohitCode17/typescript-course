@@ -1,24 +1,27 @@
-// ----------- LEC-03 Basic Types in TypeScript -----------
+// ----------- LEC-04 Basic Types in TypeScript -----------
 
-// 👉 Number Type
+// 👉 String Type
 
-// All numbers in TypeScript are either floating-point values or big integers. The floating-point numbers have the type 'number' while the big integers get the type 'bigint'.
+// Like JavaScript, TypeScript uses double quotes (") or single quotes (') to surround string literals:.
 
-let price: number = 100;
-console.log(price);
+let firstName: string = 'Mohit';
+console.log(firstName);
 
-let x: number = 12;
-let y: number = 10;
-console.log(`Sum is: ${x+y}`);
-
-// 👉 Big Integers
-
-// The big integers represent the whole numbers larger than 2^53 – 1. A Big integer literal has the n character at the end of an integer literal like this:
-
-let big: bigint = 9007199254740991n;
-console.log(big, typeof big);
+let designation = 'Full Stack Developer';   // infer as string
+console.log(designation);
 
 
-// 👉 NOTED
+// 👉 Boolean Type
 
-// Avoid using the Number type as much as possible.
+// The TypeScript boolean type has two values: true and false.
+
+let isBuldOn:boolean;
+isBuldOn = false;
+isBuldOn = true;
+console.log(isBuldOn);
+
+const pending:boolean = true;
+const notPending = !pending;
+console.log(notPending);
+
+// 👉 NOTED: DO NOT USE BOOLEAN TYPE UNLESS YOU HAVE A GOOD REASON TO DO SO.
