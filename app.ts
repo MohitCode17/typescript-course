@@ -1,48 +1,24 @@
-// -------------- LEC-02 Types in TypeScript --------------
+// ----------- LEC-03 Basic Types in TypeScript -----------
 
-// 👉 What is Types ?
+// 👉 Number Type
 
-// A type is a label that describes the different properties and methods that a value has. A value is anything that you can assign to a variable e.g., a number, a string, an array, an object, and a function.
+// All numbers in TypeScript are either floating-point values or big integers. The floating-point numbers have the type 'number' while the big integers get the type 'bigint'.
 
+let price: number = 100;
+console.log(price);
 
-// 👉 Types in TypeScript:-
+let x: number = 12;
+let y: number = 10;
+console.log(`Sum is: ${x+y}`);
 
-// ➡️ Primitive types: String, Number, Boolean, Null, Undefined, Symbol.
+// 👉 Big Integers
 
-// ➡️ Object types: Functions, Arrays, Classes, etc.
+// The big integers represent the whole numbers larger than 2^53 – 1. A Big integer literal has the n character at the end of an integer literal like this:
 
-
-// 👉 Type Annotations
-
-// TypeScript uses type annotations to explicitly specify types for identifiers.
-
-// TypeScript uses the syntax : type after an identifier
-
-// Syntax: let variableName: type;
-
-let count: number = 20;
-count = 21;
-// count = 'hello';   // compile error: 'string' is not assignable to type 'number'
-
-let isActive: boolean = true;
-let studentName: string = 'Rohan';
+let big: bigint = 9007199254740991n;
+console.log(big, typeof big);
 
 
-// 👉 Type Inference
+// 👉 NOTED
 
-// Type inference describes where and how TypeScript infers types when you don’t explicitly annotate them.
-
-// let counter: number = 10;   // Explicitly specify a type
-
-let counter = 10;   // If we initialize the counter variable with a number, TypeScript will infer the type the to be 'number'.
-
-
-/*
-👉 ------------------ NOTED ----------------------
-
-In practice, you should always use the type inference as much as possible. And you use the type annotation in the following cases:
-
-➡️ When you declare a variable and assign it a value later.
-➡️ When you want a variable that can’t be inferred.
-➡️When a function returns the any type and you need to clarify the value.
-*/
+// Avoid using the Number type as much as possible.
